@@ -9,7 +9,6 @@ const api = axios.create({
   },
 });
 
-// Request interceptor to add token
 api.interceptors.request.use(
 
   (config) => {
@@ -23,7 +22,6 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response interceptor for token refresh
 api.interceptors.response.use(
   (response) => response,
   async (error) => {
