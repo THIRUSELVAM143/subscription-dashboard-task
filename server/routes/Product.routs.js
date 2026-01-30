@@ -7,6 +7,7 @@ const productController = require("../controllers/Product.controller");
 
 router.get("/getlimitproduct", productController.getProducts);
 router.post("/", productController.createProduct);
+router.delete("/delete/:id", productController.deleteProduct);
 
 
 
